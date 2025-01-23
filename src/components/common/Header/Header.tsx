@@ -1,13 +1,18 @@
+import { HeaderBasket } from "../../eCommerce";
+import { Badge, Container, Nav, Navbar } from "react-bootstrap";
+
 import styles from "./styles.module.css";
 
-import { Badge, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+const { headerContainer, headerLogo } = styles;
+
 export default function Header() {
   return (
     <header>
-      <div>
-        <h1>
+      <div className={headerContainer}>
+        <h1 className={headerLogo}>
           <span>our</span> <Badge bg="info">Ecom</Badge>
         </h1>
+        <HeaderBasket />
       </div>
       <Navbar
         expand="lg"
