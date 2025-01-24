@@ -9,6 +9,7 @@ import AboutUs from "@pages/AboutUs";
 
 import Login from "@pages/Login";
 import Register from "@pages/Register";
+import Error from "@pages/Error";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
