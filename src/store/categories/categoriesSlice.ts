@@ -1,13 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  records: [],
+  loading: "idle",
+  error: null,
+};
 
 const categoriesSlice = createSlice({
   name: "categories",
   initialState,
-  reducers: {
-    setCategories(state, action) {
-      return action.payload;
-    },
-  },
+  reducers: {},
 });
+
+console.log(categoriesSlice);
+
+export default categoriesSlice.reducer;
