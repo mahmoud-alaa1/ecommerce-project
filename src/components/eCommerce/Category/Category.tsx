@@ -1,18 +1,24 @@
+import { Link } from "react-router-dom";
+
+//styles
 import styles from "./styles.module.css";
 const { category, categoryImg, categoryTitle } = styles;
 
 interface IProps {
   title: string;
   img: string;
+  prefix: string;
 }
 
-const Category = ({ title, img }: IProps) => {
+const Category = ({ title, img, prefix }: IProps) => {
   return (
     <div className={category}>
-      <div className={categoryImg}>
-        <img src={img} alt="" />
-      </div>
-      <h4 className={categoryTitle}>{title}</h4>
+      <Link to={`/categories/products/${prefix}`}>
+        <div className={categoryImg}>
+          <img src={img} alt={title} />
+        </div>
+        <h4 className={` ${categoryTitle}`}>{title}</h4>
+      </Link>
     </div>
   );
 };
